@@ -9,16 +9,16 @@
     <session-factory>
 
         <!-- Database connection settings -->
-        <property name="connection.driver_class">org.h2.Driver</property>
-        <property name="connection.url">jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1;MVCC=TRUE</property>
-        <property name="connection.username">sa</property>
-        <property name="connection.password"></property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
 
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
 
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- Disable the second-level cache  -->
         <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
@@ -30,8 +30,12 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="com.eric.itracer.entity.CustomerInfo"/>
-
+        <mapping class="com.eric.itracer.entity.url.UrlVisit"/>
+        <mapping class="com.eric.itracer.entity.url.UrlEnter"/>
+        <mapping class="com.eric.itracer.entity.url.UrlExit"/>
+		<mapping class="com.eric.itracer.entity.click.ButtonClick"/>
+		<mapping class="com.eric.itracer.entity.click.HyperlinkClick"/>
+		<mapping class="com.eric.itracer.entity.click.InputClick"/>
     </session-factory>
 
 </hibernate-configuration>

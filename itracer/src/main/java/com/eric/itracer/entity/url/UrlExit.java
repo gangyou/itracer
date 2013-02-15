@@ -1,4 +1,11 @@
 package com.eric.itracer.entity.url;
 
-public class UrlExit extends UrlRecord {
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("url_exit")
+public class UrlExit extends UrlVisit {
+
+	private static final long serialVersionUID = -6419926766822982230L;
 }

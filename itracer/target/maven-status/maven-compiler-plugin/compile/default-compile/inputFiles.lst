@@ -1,0 +1,10 @@
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/url/UrlVisit.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/click/HyperlinkClick.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/url/UrlExit.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/embeded/CustomerInfo.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/url/UrlEnter.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/embeded/ClickAction.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/click/InputClick.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/embeded/Channel.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/embeded/HttpHeader.java
+/home/eric/git/itracer/itracer/src/main/java/com/eric/itracer/entity/click/ButtonClick.java
