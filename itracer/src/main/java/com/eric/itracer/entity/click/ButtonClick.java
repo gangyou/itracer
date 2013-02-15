@@ -12,7 +12,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 import com.eric.itracer.entity.embeded.Channel;
 import com.eric.itracer.entity.embeded.ClickAction;
-import com.eric.itracer.entity.embeded.CustomerInfo;
 
 @Entity(name = "button_click")
 public class ButtonClick implements Serializable {
@@ -35,12 +34,9 @@ public class ButtonClick implements Serializable {
 	private ClickAction clickAction;
 	@Embedded
 	private Channel channel;
-	@Embedded
-	private CustomerInfo customer;
 
 	public ButtonClick(String buttonName, String buttonId, String buttonType,
-			String buttonClass, CustomerInfo customer, ClickAction clickAction,
-			Channel channel) {
+			String buttonClass, ClickAction clickAction, Channel channel) {
 		super();
 		this.buttonName = buttonName;
 		this.buttonId = buttonId;
@@ -48,15 +44,6 @@ public class ButtonClick implements Serializable {
 		this.buttonClass = buttonClass;
 		this.clickAction = clickAction;
 		this.channel = channel;
-		this.customer = customer;
-	}
-
-	public CustomerInfo getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(CustomerInfo customer) {
-		this.customer = customer;
 	}
 
 	public ButtonClick() {
