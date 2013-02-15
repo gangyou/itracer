@@ -11,6 +11,9 @@ public class Channel {
 		this.client = client;
 	}
 
+	public Channel() {
+	}
+
 	@Column(name = "channel_name")
 	private String name;
 	@Column(name = "channel_client")

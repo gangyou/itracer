@@ -48,6 +48,9 @@ public class InputClick implements Serializable {
 		this.channel = channel;
 	}
 
+	public InputClick() {
+	}
+
 	public Channel getChannel() {
 		return channel;
 	}

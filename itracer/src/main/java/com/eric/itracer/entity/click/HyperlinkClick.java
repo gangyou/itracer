@@ -33,10 +33,6 @@ public class HyperlinkClick implements Serializable {
 	@Embedded
 	private Channel channel;
 
-	public Channel getChannel() {
-		return channel;
-	}
-
 	public HyperlinkClick(String href, String linkId, String linkName,
 			String linkClass, ClickAction clickAction, Channel channel) {
 		super();
@@ -46,6 +42,13 @@ public class HyperlinkClick implements Serializable {
 		this.linkClass = linkClass;
 		this.clickAction = clickAction;
 		this.channel = channel;
+	}
+
+	public HyperlinkClick() {
+	}
+
+	public Channel getChannel() {
+		return channel;
 	}
 
 	public void setChannel(Channel channel) {

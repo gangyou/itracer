@@ -5,7 +5,7 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class CustomerInfo {
-	@Column(name = "customer_id", length=20, nullable=false, updatable=false)
+	@Column(name = "customer_id", length = 20, nullable = false, updatable = false)
 	private String id;
 	@Column(name = "customer_ip")
 	private String ip;
@@ -17,6 +17,9 @@ public class CustomerInfo {
 		this.id = id;
 		this.ip = ip;
 		this.isVip = isVip;
+	}
+
+	public CustomerInfo() {
 	}
 
 	public String getId() {

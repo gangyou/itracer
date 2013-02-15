@@ -46,6 +46,9 @@ public class ButtonClick implements Serializable {
 		this.channel = channel;
 	}
 
+	public ButtonClick() {
+	}
+
 	public Channel getChannel() {
 		return channel;
 	}

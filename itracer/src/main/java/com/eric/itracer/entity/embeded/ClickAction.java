@@ -8,7 +8,6 @@ import javax.persistence.Embedded;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Embeddable
 public class ClickAction {
 	@Column(name = "click_location_url")
@@ -24,6 +23,9 @@ public class ClickAction {
 		this.locationUrl = locationUrl;
 		this.time = time;
 		this.cusomter = cusomter;
+	}
+
+	public ClickAction() {
 	}
 
 	public String getLocationUrl() {

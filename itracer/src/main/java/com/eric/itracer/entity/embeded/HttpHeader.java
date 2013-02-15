@@ -40,6 +40,9 @@ public class HttpHeader {
 		this.responseCode = responseCode;
 	}
 
+	public HttpHeader() {
+	}
+
 	public int getResponseCode() {
 		return responseCode;
 	}
