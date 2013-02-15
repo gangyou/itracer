@@ -5,7 +5,7 @@
 	<groupId>com.eric</groupId>
 	<artifactId>itracer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>itracer</name>
 	<url>http://maven.apache.org</url>
@@ -78,7 +78,7 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>8.1.9.v20130131</version>
 				<configuration>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<scanIntervalSeconds>30</scanIntervalSeconds>
 				</configuration>
 			</plugin>
 		</plugins>
