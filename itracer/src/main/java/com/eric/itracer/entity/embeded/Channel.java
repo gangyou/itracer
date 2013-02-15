@@ -5,6 +5,12 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class Channel {
+	public Channel(String name, String client) {
+		super();
+		this.name = name;
+		this.client = client;
+	}
+
 	@Column(name = "channel_name")
 	private String name;
 	@Column(name = "channel_client")

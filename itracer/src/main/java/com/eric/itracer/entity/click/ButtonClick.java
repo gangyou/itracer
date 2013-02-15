@@ -35,6 +35,17 @@ public class ButtonClick implements Serializable {
 	@Embedded
 	private Channel channel;
 
+	public ButtonClick(String buttonName, String buttonId, String buttonType,
+			String buttonClass, ClickAction clickAction, Channel channel) {
+		super();
+		this.buttonName = buttonName;
+		this.buttonId = buttonId;
+		this.buttonType = buttonType;
+		this.buttonClass = buttonClass;
+		this.clickAction = clickAction;
+		this.channel = channel;
+	}
+
 	public Channel getChannel() {
 		return channel;
 	}

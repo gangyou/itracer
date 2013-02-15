@@ -19,6 +19,13 @@ public class ClickAction {
 	@Embedded
 	private CustomerInfo cusomter;
 
+	public ClickAction(String locationUrl, Date time, CustomerInfo cusomter) {
+		super();
+		this.locationUrl = locationUrl;
+		this.time = time;
+		this.cusomter = cusomter;
+	}
+
 	public String getLocationUrl() {
 		return locationUrl;
 	}

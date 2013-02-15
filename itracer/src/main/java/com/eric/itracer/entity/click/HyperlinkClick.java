@@ -37,6 +37,17 @@ public class HyperlinkClick implements Serializable {
 		return channel;
 	}
 
+	public HyperlinkClick(String href, String linkId, String linkName,
+			String linkClass, ClickAction clickAction, Channel channel) {
+		super();
+		this.href = href;
+		this.linkId = linkId;
+		this.linkName = linkName;
+		this.linkClass = linkClass;
+		this.clickAction = clickAction;
+		this.channel = channel;
+	}
+
 	public void setChannel(Channel channel) {
 		this.channel = channel;
 	}

@@ -35,7 +35,7 @@ public class UrlVisit implements Serializable {
 	@Embedded
 	private Channel channel;
 	@Embedded
-	private CustomerInfo customer = new CustomerInfo();
+	private CustomerInfo customer;
 	@Embedded
 	private HttpHeader httpHeader;
 	@Column(name = "request_url")
@@ -43,6 +43,18 @@ public class UrlVisit implements Serializable {
 	@Column(name = "request_time")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date time;
+	
+	public UrlVisit(){}
+
+	public UrlVisit(Channel channel, CustomerInfo customer,
+			HttpHeader httpHeader, String requestUrl, Date time) {
+		super();
+		this.channel = channel;
+		this.customer = customer;
+		this.httpHeader = httpHeader;
+		this.requestUrl = requestUrl;
+		this.time = time;
+	}
 
 	public long getId() {
 		return id;

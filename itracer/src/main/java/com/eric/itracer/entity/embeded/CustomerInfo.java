@@ -12,6 +12,13 @@ public class CustomerInfo {
 	@Column(name = "customer_is_vip")
 	private boolean isVip;
 
+	public CustomerInfo(String id, String ip, boolean isVip) {
+		super();
+		this.id = id;
+		this.ip = ip;
+		this.isVip = isVip;
+	}
+
 	public String getId() {
 		return id;
 	}

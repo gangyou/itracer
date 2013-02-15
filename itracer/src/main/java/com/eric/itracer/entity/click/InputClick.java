@@ -35,6 +35,19 @@ public class InputClick implements Serializable {
 	@Embedded
 	private Channel channel;
 
+	public InputClick(String inputName, String inputId, String inputHint,
+			String formName, String formAction, ClickAction clickAction,
+			Channel channel) {
+		super();
+		this.inputName = inputName;
+		this.inputId = inputId;
+		this.inputHint = inputHint;
+		this.formName = formName;
+		this.formAction = formAction;
+		this.clickAction = clickAction;
+		this.channel = channel;
+	}
+
 	public Channel getChannel() {
 		return channel;
 	}
