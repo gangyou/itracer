@@ -16,13 +16,13 @@ public class ClickAction {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date time;
 	@Embedded
-	private CustomerInfo cusomter;
+	private CustomerInfo customer;
 
-	public ClickAction(String locationUrl, Date time, CustomerInfo cusomter) {
+	public ClickAction(String locationUrl, Date time, CustomerInfo customer) {
 		super();
 		this.locationUrl = locationUrl;
 		this.time = time;
-		this.cusomter = cusomter;
+		this.customer = customer;
 	}
 
 	public ClickAction() {
@@ -45,11 +45,11 @@ public class ClickAction {
 	}
 
 	public CustomerInfo getCusomter() {
-		return cusomter;
+		return customer;
 	}
 
 	public void setCusomter(CustomerInfo cusomter) {
-		this.cusomter = cusomter;
+		this.customer = cusomter;
 	}
 
 }
