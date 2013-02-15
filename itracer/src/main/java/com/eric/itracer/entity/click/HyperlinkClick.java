@@ -12,6 +12,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import com.eric.itracer.entity.embeded.Channel;
 import com.eric.itracer.entity.embeded.ClickAction;
+import com.eric.itracer.entity.embeded.CustomerInfo;
 
 @Entity(name = "hyperlink_click")
 public class HyperlinkClick implements Serializable {
@@ -32,9 +33,12 @@ public class HyperlinkClick implements Serializable {
 	private ClickAction clickAction;
 	@Embedded
 	private Channel channel;
+	@Embedded
+	private CustomerInfo customer;
 
 	public HyperlinkClick(String href, String linkId, String linkName,
-			String linkClass, ClickAction clickAction, Channel channel) {
+			String linkClass, CustomerInfo customer, ClickAction clickAction,
+			Channel channel) {
 		super();
 		this.href = href;
 		this.linkId = linkId;
@@ -42,6 +46,15 @@ public class HyperlinkClick implements Serializable {
 		this.linkClass = linkClass;
 		this.clickAction = clickAction;
 		this.channel = channel;
+		this.customer = customer;
+	}
+
+	public CustomerInfo getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(CustomerInfo customer) {
+		this.customer = customer;
 	}
 
 	public HyperlinkClick() {

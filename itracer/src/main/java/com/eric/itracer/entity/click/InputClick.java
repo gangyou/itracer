@@ -12,6 +12,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import com.eric.itracer.entity.embeded.Channel;
 import com.eric.itracer.entity.embeded.ClickAction;
+import com.eric.itracer.entity.embeded.CustomerInfo;
 
 @Entity(name = "input_click")
 public class InputClick implements Serializable {
@@ -34,9 +35,12 @@ public class InputClick implements Serializable {
 	private ClickAction clickAction;
 	@Embedded
 	private Channel channel;
+	@Embedded
+	private CustomerInfo customer;
 
 	public InputClick(String inputName, String inputId, String inputHint,
-			String formName, String formAction, ClickAction clickAction,
+			String formName, String formAction, CustomerInfo customer,
+			ClickAction clickAction,
 			Channel channel) {
 		super();
 		this.inputName = inputName;
@@ -46,6 +50,15 @@ public class InputClick implements Serializable {
 		this.formAction = formAction;
 		this.clickAction = clickAction;
 		this.channel = channel;
+		this.customer = customer;
+	}
+
+	public CustomerInfo getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(CustomerInfo customer) {
+		this.customer = customer;
 	}
 
 	public InputClick() {
