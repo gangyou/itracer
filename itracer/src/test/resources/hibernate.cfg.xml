@@ -13,51 +13,22 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 
-
-		<!-- 当连接池中的连接耗尽 的时候c3p0一次同时获取的连接数 -->
 		<property name="hibernate.c3p0.initialPoolSize">3</property>
-
-		<!-- 最大连接数 -->
 		<property name="hibernate.c3p0.max_size">20</property>
-
-		<!-- 最小连接数 -->
 		<property name="hibernate.c3p0.min_size">5</property>
-
-		<!-- 获得连接的超时时间 ,如果超过这个时间,会抛出异常，单位毫秒 -->
 		<property name="hibernate.c3p0.timeout">120</property>
-
-		<!-- 最大的PreparedStatement 的数量 -->
 		<property name="hibernate.c3p0.max_statements">100</property>
-
-		<!-- 每隔120秒检查连接池里的空闲连接 ，单位是秒 -->
 		<property name="hibernate.c3p0.idle_test_period">120</property>
-
-		<!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
 		<property name="hibernate.c3p0.acquire_increment">2</property>
-
-		<!-- 每次都验证连接 是否可用 -->
 		<property name="hibernate.c3p0.validate">true</property>
-
-		<!--c3p0是异步操作的，缓慢的JDBC操作通过帮助进程 完成。扩展这些操作可以有效的提升性能通过多线程实现多个操作同时被执行。Default: 
-			3 -->
 		<property name="hibernate.c3p0.numHelperThreads">10</property>
-
-		<!--如果设为true那么在取得连接的同时将校验连接的有效性 。Default: false -->
 		<property name="hibernate.c3p0.testConnectionOnCheckin">true</property>
-
-		<!--因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的时候 都将校验其有效性 。建议使用idleConnectionTestPeriod或automaticTestTable等方法来提升连接测试的性能。Default: 
-			false -->
 		<property name="hibernate.c3p0.testConnectionOnCheckout">false</property>
 
-		<!-- SQL dialect -->
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
-
-		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
 
-		<!-- Names the annotated entity class -->
 		<mapping class="com.eric.itracer.entity.url.UrlVisit" />
 		<mapping class="com.eric.itracer.entity.url.UrlEnter" />
 		<mapping class="com.eric.itracer.entity.url.UrlExit" />
