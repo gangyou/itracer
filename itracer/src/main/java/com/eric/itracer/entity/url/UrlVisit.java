@@ -16,11 +16,13 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.eric.itracer.entity.embeded.Channel;
 import com.eric.itracer.entity.embeded.CustomerInfo;
 import com.eric.itracer.entity.embeded.HttpHeader;
+import com.eric.itracer.service.CustomDateSerializer;
 
 @Entity(name = "url_visit")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -43,8 +45,9 @@ public class UrlVisit implements Serializable {
 	@Column(name = "request_time")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date time;
-	
-	public UrlVisit(){}
+
+	public UrlVisit() {
+	}
 
 	public UrlVisit(Channel channel, CustomerInfo customer,
 			HttpHeader httpHeader, String requestUrl, Date time) {
@@ -96,6 +99,7 @@ public class UrlVisit implements Serializable {
 		this.requestUrl = requestUrl;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public Date getTime() {
 		return time;
 	}
