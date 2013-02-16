@@ -3,6 +3,8 @@ package com.eric.itracer.entity.embeded;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 @Embeddable
 public class CustomerInfo {
 	@Column(name = "customer_id", length = 20, nullable = false, updatable = false)
@@ -38,10 +40,12 @@ public class CustomerInfo {
 		this.ip = ip;
 	}
 
+	@JsonProperty("isVip")
 	public boolean isVip() {
 		return isVip;
 	}
 
+	@JsonProperty("isVip")
 	public void setVip(boolean isVip) {
 		this.isVip = isVip;
 	}
