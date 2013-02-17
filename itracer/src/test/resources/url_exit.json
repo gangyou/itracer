@@ -1,0 +1,13 @@
+{
+	"channel" : {
+		"name" : "e-bank",
+		"client" : "Android phone"
+	},
+	"customer": {
+		"id" : "0000002",
+		"ip" : "1.1.1.1",
+		"isVip" : false
+	},
+	"requestUrl" : "http://localhost:8080/perbank/helloworld.do",
+	"time" : "20130213130102"
+}

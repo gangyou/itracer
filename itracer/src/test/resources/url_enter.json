@@ -1,0 +1,13 @@
+{
+	"channel" : {
+		"name" : "mobile-bank",
+		"client" : "iphone"
+	},
+	"customer": {
+		"id" : "0000001",
+		"ip" : "127.0.0.1",
+		"isVip" : true
+	},
+	"requestUrl" : "http://localhost:8080/perbank/helloworld.do",
+	"time" : "20130213120525"
+}
