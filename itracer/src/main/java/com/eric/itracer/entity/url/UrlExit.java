@@ -13,10 +13,12 @@ import com.eric.itracer.entity.embeded.HttpHeader;
 @DiscriminatorValue("url_exit")
 public class UrlExit extends UrlVisit {
 
+	public UrlExit() {
+	}
+
 	public UrlExit(Channel channel, CustomerInfo customer,
 			HttpHeader httpHeader, String requestUrl, Date time) {
 		super(channel, customer, httpHeader, requestUrl, time);
-		// TODO Auto-generated constructor stub
 	}
 
 	private static final long serialVersionUID = -6419926766822982230L;

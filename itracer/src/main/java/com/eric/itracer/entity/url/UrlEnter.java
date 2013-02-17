@@ -12,8 +12,9 @@ import com.eric.itracer.entity.embeded.HttpHeader;
 @Entity
 @DiscriminatorValue("url_enter")
 public class UrlEnter extends UrlVisit {
-	
-	public UrlEnter(){}
+
+	public UrlEnter() {
+	}
 
 	public UrlEnter(Channel channel, CustomerInfo customer,
 			HttpHeader httpHeader, String requestUrl, Date time) {
@@ -22,5 +23,4 @@ public class UrlEnter extends UrlVisit {
 
 	private static final long serialVersionUID = 4827066903419101093L;
 
-	
 }
