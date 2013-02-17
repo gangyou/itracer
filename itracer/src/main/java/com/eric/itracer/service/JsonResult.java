@@ -4,21 +4,24 @@ import java.io.Serializable;
 
 public class JsonResult implements Serializable {
 	private static final long serialVersionUID = -3179342434669068854L;
-	private boolean result;
-	private String msg;
-	
-	public JsonResult(boolean result, String msg) {
+	private boolean success = false;
+	private String msg = "";
+
+	public JsonResult() {
+	}
+
+	public JsonResult(boolean success, String msg) {
 		super();
-		this.result = result;
+		this.success = success;
 		this.msg = msg;
 	}
 
-	public boolean isResult() {
-		return result;
+	public boolean isSuccess() {
+		return success;
 	}
 
-	public void setResult(boolean result) {
-		this.result = result;
+	public void setSuccess(boolean success) {
+		this.success = success;
 	}
 
 	public String getMsg() {
