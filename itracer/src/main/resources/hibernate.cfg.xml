@@ -9,7 +9,7 @@
 		<property name="connection.url">jdbc:mysql://localhost:3306/itracer</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
-
+		<property name="hibernate.jdbc.batch_size">20</property>
 		<property name="hibernate.c3p0.initialPoolSize">3</property>
 		<property name="hibernate.c3p0.max_size">20</property>
 		<property name="hibernate.c3p0.min_size">5</property>

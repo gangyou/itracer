@@ -18,21 +18,22 @@ public class GenericHibernateDao<T extends Serializable, PK extends Serializable
 		implements GenericDao<T, PK> {
 
 	private Class<T> entityClass;
-	private Session session;
-	private Transaction tx;
+	protected Session session;
+	protected Transaction tx;
 
-	private void startOperation() {
+	protected void startOperation() {
 		session = HibernateUtil.getSession();
 		tx = session.beginTransaction();
 	}
 
-	private void endOperation() {
+	protected void endOperation() {
 		tx.commit();
 		session.flush();
+		session.clear();
 		session.close();
 	}
 
-	private void rollback() {
+	protected void rollback() {
 		tx.rollback();
 	}
 
