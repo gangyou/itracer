@@ -13,6 +13,8 @@ import org.jboss.resteasy.client.ClientResponse;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.eric.itracer.service.helper.JsonResult;
+
 import static org.junit.Assert.*;
 
 public class UrlVisitServiceTest {

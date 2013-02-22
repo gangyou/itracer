@@ -22,7 +22,7 @@ import org.hibernate.annotations.GenericGenerator;
 import com.eric.itracer.entity.embeded.Channel;
 import com.eric.itracer.entity.embeded.CustomerInfo;
 import com.eric.itracer.entity.embeded.HttpHeader;
-import com.eric.itracer.service.CustomDateSerializer;
+import com.eric.itracer.service.helper.CustomDateSerializer;
 
 @Entity(name = "url_visit")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

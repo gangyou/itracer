@@ -1,4 +1,4 @@
-package com.eric.itracer.service;
+package com.eric.itracer.service.helper;
 
 import java.io.Serializable;
 

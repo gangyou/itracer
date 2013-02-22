@@ -15,6 +15,7 @@ import com.eric.itracer.dao.impl.UrlExitDAO;
 import com.eric.itracer.entity.embeded.HttpHeader;
 import com.eric.itracer.entity.url.UrlEnter;
 import com.eric.itracer.entity.url.UrlExit;
+import com.eric.itracer.service.helper.JsonResult;
 import com.eric.itracer.util.HttpHeadersUtil;
 
 @Path("/url")
