@@ -7,9 +7,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.eric.itracer.dao.impl.UrlEnterDAO;
 import com.eric.itracer.dao.impl.UrlExitDAO;
 import com.eric.itracer.entity.embeded.HttpHeader;
@@ -19,11 +16,10 @@ import com.eric.itracer.service.helper.JsonResult;
 import com.eric.itracer.util.HttpHeadersUtil;
 
 @Path("/url")
-public class UrlVisitService {
+public class UrlVisitService extends LoggingService {
 
 	private UrlEnterDAO urlEnterDAO;
 	private UrlExitDAO urlExitDAO;
-	private Logger logger = LoggerFactory.getLogger(UrlVisitService.class);
 
 	public UrlVisitService() {
 		urlEnterDAO = new UrlEnterDAO();
@@ -34,16 +30,14 @@ public class UrlVisitService {
 	@Path("/enter")
 	@Produces("application/json")
 	@Consumes("application/json")
-	public JsonResult urlEnter(UrlEnter enter,@Context HttpHeaders httpHeaders) {
+	public JsonResult urlEnter(UrlEnter enter, @Context HttpHeaders httpHeaders) {
 		JsonResult result = new JsonResult();
 		try {
 			HttpHeader header = HttpHeadersUtil.buildHttpHeader(httpHeaders);
 			enter.setHttpHeader(header);
 			urlEnterDAO.save(enter);
 		} catch (Exception e) {
-			logger.error("存储UrlEnter实体失败: " + enter);
-			logger.error(e.getLocalizedMessage());
-			
+			err("存储UrlEnter实体失败: " + enter);
 			result.setSuccess(false);
 			result.setMsg("persistent Url Enter record error!");
 			return result;
@@ -51,21 +45,19 @@ public class UrlVisitService {
 		result.setSuccess(true);
 		return result;
 	}
-	
+
 	@POST
 	@Path("/exit")
 	@Produces("application/json")
 	@Consumes("application/json")
-	public JsonResult urlExit(UrlExit exit, @Context HttpHeaders httpHeaders){
+	public JsonResult urlExit(UrlExit exit, @Context HttpHeaders httpHeaders) {
 		JsonResult result = new JsonResult();
 		try {
 			HttpHeader header = HttpHeadersUtil.buildHttpHeader(httpHeaders);
 			exit.setHttpHeader(header);
 			urlExitDAO.save(exit);
 		} catch (Exception e) {
-			logger.error("存储UrlExit实体失败: " + exit);
-			logger.error(e.getLocalizedMessage());
-			
+			err("存储UrlExit实体失败: " + exit);
 			result.setSuccess(false);
 			result.setMsg("persistent Url exit record error!");
 			return result;
